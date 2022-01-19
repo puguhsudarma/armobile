@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "build-android": "yarn jetify && cd ./android && ./gradlew app:assembleRelease && cd ..",
     "clean-android": "cd android/ && ./gradlew clean && cd ..",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -13,7 +14,9 @@
   "dependencies": {
     "@viro-community/react-viro": "^2.22.0",
     "react": "17.0.2",
-    "react-native": "0.66.4"
+    "react-native": "0.66.4",
+    "react-native-vector-icons": "^9.0.0",
+    "zustand": "^3.6.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -21,6 +24,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.4",
+    "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
